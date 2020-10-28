@@ -4,6 +4,8 @@ Last updated for OpenShift 4.5 - October 22, 2020
 
 For canonical and more detailed information, please see the official docs:  https://docs.openshift.com/container-platform/4.5/installing/installing_bare_metal/installing-bare-metal.html#prerequisites
 
+This blog post can also help explain things in more detail:  https://www.openshift.com/blog/openshift-4-bare-metal-install-quickstart
+
 If there is a conflict between this checklist and the [official docs](https://docs.openshift.com/container-platform/4.5/installing/installing_bare_metal/installing-bare-metal.html#prerequisites), defer to the [official docs](https://docs.openshift.com/container-platform/4.5/installing/installing_bare_metal/installing-bare-metal.html#prerequisites).
 
 ## Pre-requisites
@@ -52,9 +54,46 @@ If there is a conflict between this checklist and the [official docs](https://do
 
 #### DNS
 
-- [ ] `api.<clustername>.<domain>` points to API load balancer, resolves from **outside** the cluster
-- [ ] `api-int.<clustername>.<domain>` points to API Load Balancer, resolves from **inside** the cluster
-- [ ] `*.apps.<clustername>.<domain>` points to Routes load balancer, resolves from outside the cluster
+- [ ] Forward DNS records - (A records)
+  - [ ] Load Balancer DNS
+    - [ ] API: `api.<clustername>.<domain>` points to API load balancer, resolves from **outside** the cluster
+    - [ ] API: `api-int.<clustername>.<domain>` points to API Load Balancer, resolves from **inside** the cluster
+    - [ ] Routes/Ingress: `*.apps.<clustername>.<domain>` points to Routes load balancer, resolves from outside the cluster
+  - [ ] Node DNS
+    - [ ] Bootstrap - Example: `ocp-<clustername>-bootstrap.<domain>` (Remove after control is plane is up)
+    - [ ] Master 1 - Example: `ocp-<clustername>-master01.<domain>`
+    - [ ] Master 2 - Example: `ocp-<clustername>-master02.<domain>`
+    - [ ] Master 3 - Example: `ocp-<clustername>-master03.<domain>`
+    - [ ] Worker 1 - Example: `ocp-<clustername>-worker01.<domain>`
+    - [ ] Worker 2 - Example: `ocp-<clustername>-worker02.<domain>`
+    - [ ] Worker 3 - Example: `ocp-<clustername>-worker03.<domain>`
+    - [ ] Worker 4 - Example: `ocp-<clustername>-worker04.<domain>`
+    - [ ] Worker 5 - Example: `ocp-<clustername>-worker05.<domain>`
+    - [ ] Worker 6 - Example: `ocp-<clustername>-worker06.<domain>`
+    - [ ] Worker 7 - Example: `ocp-<clustername>-worker07.<domain>`
+    - [ ] Worker 8 - Example: `ocp-<clustername>-worker08.<domain>`
+  - [ ] etcd (`etcd-<index>.<clustername>.<domain>`)
+    - [ ] `etcd-0.<clustername>.<domain>`
+    - [ ] `etcd-1.<clustername>.<domain>`
+    - [ ] `etcd-2.<clustername>.<domain>`
+- [ ] Reverse DNS records - (PTR records) - Used by RHCOS to set hostnames
+  - [ ] Bootstrap
+  - [ ] Master 1
+  - [ ] Master 2
+  - [ ] Master 3
+  - [ ] Worker 1
+  - [ ] Worker 2
+  - [ ] Worker 3
+  - [ ] Worker 4
+  - [ ] Worker 5
+  - [ ] Worker 6
+  - [ ] Worker 7
+  - [ ] Worker 8
+- [ ] Service Discovery (SRV records for `_etcd-server-ssl._tcp.<clustername>.<domain>` priority: 0, weight: 10 and port: 2380)
+  - [ ] `etcd-0.<clustername>.<domain>`
+  - [ ] `etcd-1.<clustername>.<domain>`
+  - [ ] `etcd-2.<clustername>.<domain>`
+
 
 #### DHCP - Static IP config (delivered via DHCP) for each OpenShift node
 - [ ] Bootstrap
