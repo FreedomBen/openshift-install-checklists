@@ -91,10 +91,10 @@ If there is a conflict between this checklist and the [official docs](https://do
   - [ ] Worker 6
   - [ ] Worker 7
   - [ ] Worker 8
-- [ ] Service Discovery (SRV records for `_etcd-server-ssl._tcp.<clustername>.<domain>` priority: 0, weight: 10 and port: 2380)
-  - [ ] `etcd-0.<clustername>.<domain>`
-  - [ ] `etcd-1.<clustername>.<domain>`
-  - [ ] `etcd-2.<clustername>.<domain>`
+- [ ] Service Discovery (SRV records for Hostname: `_etcd-server-ssl._tcp.<clustername>.<domain>` priority: 0, weight: 10 and port: 2380)
+  - [ ] Server: `etcd-0.<clustername>.<domain>`
+  - [ ] Server: `etcd-1.<clustername>.<domain>`
+  - [ ] Server: `etcd-2.<clustername>.<domain>`
 
 
 #### DHCP - Static IP config (delivered via DHCP) for each OpenShift node
