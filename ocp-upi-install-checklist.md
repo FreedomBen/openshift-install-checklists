@@ -5,6 +5,7 @@ Last updated for OpenShift 4.6 - November 2, 2020
 For canonical and more detailed information, please see the official docs:  https://docs.openshift.com/container-platform/4.6/welcome/index.html
 
 For UPI on vSphere:  https://docs.openshift.com/container-platform/4.6/installing/installing_vsphere/installing-vsphere.html
+Also useful (for SRV records for example): https://www.openshift.com/blog/installing-ocp-4.3-on-vmware-with-upi
 
 This blog post can also help explain things in more detail but do note it is OCP 4.3 (which is close to out of date as I write this on US Election Day, November of 2020):  https://www.openshift.com/blog/installing-ocp-4.3-on-vmware-with-upi
 
@@ -74,7 +75,7 @@ If there is a conflict between this checklist and the [official docs](https://do
     - [ ] Worker 6 - Example: `ocp-<clustername>-worker06.<domain>`
     - [ ] Worker 7 - Example: `ocp-<clustername>-worker07.<domain>`
     - [ ] Worker 8 - Example: `ocp-<clustername>-worker08.<domain>`
-  - [ ] etcd (`etcd-<index>.<clustername>.<domain>`)
+  - [ ] etcd (`etcd-<index>.<clustername>.<domain>`) - (Can be CNAME)
     - [ ] `etcd-0.<clustername>.<domain>`
     - [ ] `etcd-1.<clustername>.<domain>`
     - [ ] `etcd-2.<clustername>.<domain>`

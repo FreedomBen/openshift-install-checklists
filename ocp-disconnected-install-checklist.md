@@ -72,7 +72,7 @@ If there is a conflict between this checklist and the [official docs](https://do
     - [ ] Worker 6 - Example: `ocp-<clustername>-worker06.<domain>`
     - [ ] Worker 7 - Example: `ocp-<clustername>-worker07.<domain>`
     - [ ] Worker 8 - Example: `ocp-<clustername>-worker08.<domain>`
-  - [ ] etcd (`etcd-<index>.<clustername>.<domain>`)
+  - [ ] etcd (`etcd-<index>.<clustername>.<domain>`) - (Can be CNAME)
     - [ ] `etcd-0.<clustername>.<domain>`
     - [ ] `etcd-1.<clustername>.<domain>`
     - [ ] `etcd-2.<clustername>.<domain>`
