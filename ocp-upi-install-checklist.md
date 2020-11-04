@@ -17,7 +17,6 @@ If there is a conflict between this checklist and the [official docs](https://do
 
 - [ ] Bastion machine (RHEL 8.2)
 - [ ] DHCP (Can reuse bastion host)
-- [ ] Container Registry (Can reuse bastion host)
 - [ ] HTTP server for assets (Can reuse bastion host)
 - [ ] Load balancer for API (Software or hardware)
 - [ ] Load balancer for Ingress (Software or hardware)
