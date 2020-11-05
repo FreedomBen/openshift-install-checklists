@@ -47,10 +47,10 @@ If there is a conflict between this checklist and the [official docs](https://do
 - [ ] Routes:
   - [ ] HTTP traffic (Internal and External)
     - [ ] Frontend 80/tcp - Layer 4 (TCP) (or Layer 7 (HTTP)?)
-    - [ ] Backend to worker/compute machines (data plane)
+    - [ ] Backend to infra/worker/compute machines running router pods (data plane)
   - [ ] HTTPS traffic (Internal and External)
     - [ ] Frontend 443 - Layer 4 (TCP) mode AKA TLS pass-through
-    - [ ] Backend to worker/compute machines (data plane)
+    - [ ] Backend to infra/worker/compute machines running router pods (data plane)
 
 #### DNS
 
