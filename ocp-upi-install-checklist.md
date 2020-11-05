@@ -145,7 +145,7 @@ If there is a conflict between this checklist and the [official docs](https://do
 - [ ] [Internal oauth](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html/authentication_and_authorization/configuring-internal-oauth)
 - [ ] [Configure HTPasswd IDP](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html/authentication_and_authorization/configuring-identity-providers#configuring-htpasswd-identity-provider)
 - [ ] [Configure Main IDP (LDAP, OIDC, etc)](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html/authentication_and_authorization/configuring-identity-providers)
-- [ ] [Create "break glass" user using HTPasswd](#)
+- [ ] [Create "break glass" user using HTPasswd](https://docs.openshift.com/container-platform/4.6/authentication/identity_providers/configuring-htpasswd-identity-provider.html) ([alt link](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html/authentication_and_authorization/configuring-identity-providers#configuring-htpasswd-identity-provider))
 - [ ] [Remove kubeadmin user](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html/authentication_and_authorization/removing-kubeadmin) ([alt link](https://docs.openshift.com/container-platform/4.6/post_installation_configuration/preparing-for-users.html#understanding-kubeadmin_post-install-preparing-for-users))
 - [ ] [LDAP Group Sync](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html/authentication_and_authorization/ldap-syncing)
 
