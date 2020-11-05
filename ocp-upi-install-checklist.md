@@ -52,7 +52,7 @@ If there is a conflict between this checklist and the [official docs](https://do
     - [ ] Backend to worker/compute machines (data plane)
   - [ ] HTTPS traffic (Internal and External)
     - [ ] Frontend 443 - Layer 4 (TCP) mode AKA TLS pass-through
-    - [ ] Backend to Bootstrap machine and Master machines (control plane)
+    - [ ] Backend to worker/compute machines (data plane)
 
 #### DNS
 
