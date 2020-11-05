@@ -139,5 +139,61 @@ If there is a conflict between this checklist and the [official docs](https://do
   - [ ] 6443 (Kubernetes API)
 
 
-### Post-install (Day 2)
+### Post-install
+
+#### Authentication
+- [ ] [Internal oauth](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html/authentication_and_authorization/configuring-internal-oauth)
+- [ ] [Configure HTPasswd IDP](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html/authentication_and_authorization/configuring-identity-providers#configuring-htpasswd-identity-provider)
+- [ ] [Configure Main IDP (LDAP, OIDC, etc)](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html/authentication_and_authorization/configuring-identity-providers)
+- [ ] [Create "break glass" user using HTPasswd](#)
+- [ ] [Remove kubeadmin user](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html/authentication_and_authorization/removing-kubeadmin) ([alt link](https://docs.openshift.com/container-platform/4.6/post_installation_configuration/preparing-for-users.html#understanding-kubeadmin_post-install-preparing-for-users))
+- [ ] [LDAP Group Sync](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html/authentication_and_authorization/ldap-syncing)
+
+#### Machine and Node Config
+- [ ] Create infra nodes ([Add label to worker](https://access.redhat.com/solutions/4287111)) ([Create machineset](https://docs.openshift.com/container-platform/4.6/machine_management/creating-infrastructure-machinesets.html)) ([Move resources to infra nodes](https://docs.openshift.com/container-platform/4.6/machine_management/creating-infrastructure-machinesets.html#moving-resources-to-infrastructure-machinesets))
+- [ ] [Machine Health Checks](https://docs.openshift.com/container-platform/4.6/post_installation_configuration/node-tasks.html#post-installation-config-deploying-machine-health-checks)
+- [ ] [Cluster Auto-scaling](https://docs.openshift.com/container-platform/4.6/post_installation_configuration/cluster-tasks.html#cluster-autoscaler-about_post-install-cluster-tasks)
+- [ ] [Node Tuning Operator](https://docs.openshift.com/container-platform/4.6/post_installation_configuration/node-tasks.html#post-using-node-tuning-operator) ([Blog Post](https://www.openshift.com/blog/node-tuning-operator-and-friends-in-openshift-4.5))
+- [ ] [Max Pods per Node](https://docs.openshift.com/container-platform/4.6/post_installation_configuration/node-tasks.html#nodes-nodes-managing-max-pods-about_post-install-node-tasks)
+- [ ] [Taints and Tolerations](https://docs.openshift.com/container-platform/4.6/post_installation_configuration/node-tasks.html#post-install-taints-tolerations)
+- [ ] [Configure Huge Pages](https://docs.openshift.com/container-platform/4.6/post_installation_configuration/node-tasks.html#configuring-huge-pages_post-install-node-tasks)
+- [ ] [Device Plugins](https://docs.openshift.com/container-platform/3.11/dev_guide/device_plugins.html)
+- [ ] [Real Time Kernel](https://docs.openshift.com/container-platform/4.6/post_installation_configuration/machine-configuration-tasks.html#nodes-nodes-rtkernel-arguments_post-install-machine-configuration-tasks)
+- [ ] [Journald settings](https://docs.openshift.com/container-platform/4.6/post_installation_configuration/machine-configuration-tasks.html#machineconfig-modify-journald_post-install-machine-configuration-tasks)
+
+#### Persistent Storage
+- [ ] [Setup Persistent Storage](https://docs.openshift.com/container-platform/4.6/post_installation_configuration/storage-configuration.html) - [NFS](https://docs.openshift.com/container-platform/4.6/storage/persistent_storage/persistent-storage-nfs.html) - [OCS](https://docs.openshift.com/container-platform/4.6/storage/persistent_storage/persistent-storage-ocs.html) - [vSphere](https://docs.openshift.com/container-platform/4.6/storage/persistent_storage/persistent-storage-vsphere.html) - [local](https://docs.openshift.com/container-platform/4.6/storage/persistent_storage/persistent-storage-local.html) - [EFS](https://docs.openshift.com/container-platform/4.6/storage/persistent_storage/persistent-storage-efs.html) - [EBS](https://docs.openshift.com/container-platform/4.6/storage/persistent_storage/persistent-storage-aws.html) - [Azure Disk](https://docs.openshift.com/container-platform/4.6/storage/persistent_storage/persistent-storage-azure.html) - [Azure File](https://docs.openshift.com/container-platform/4.6/storage/persistent_storage/persistent-storage-azure-file.html) - [hostPath](https://docs.openshift.com/container-platform/4.6/storage/persistent_storage/persistent-storage-hostpath.html) - [iSCSI](https://docs.openshift.com/container-platform/4.6/storage/persistent_storage/persistent-storage-iscsi.html)
+- [ ] [Dynamic Provisioning](https://docs.openshift.com/container-platform/4.6/storage/dynamic-provisioning.html)
+
+#### Registry
+- [ ] Enable Registry:  ([Bare Metal and vSPhere](https://docs.openshift.com/container-platform/4.6/registry/configuring-registry-operator.html#registry-removed_configuring-registry-operator))
+- [ ] Configure Registry:  [AWS](https://docs.openshift.com/container-platform/4.6/registry/configuring_registry_storage/configuring-registry-storage-aws-user-infrastructure.html) - [GCP](https://docs.openshift.com/container-platform/4.6/registry/configuring_registry_storage/configuring-registry-storage-gcp-user-infrastructure.html) - [Azure](https://docs.openshift.com/container-platform/4.6/registry/configuring_registry_storage/configuring-registry-storage-azure-user-infrastructure.html) - [Bare Metal](https://docs.openshift.com/container-platform/4.6/registry/configuring_registry_storage/configuring-registry-storage-baremetal.html) - [vSphere](https://docs.openshift.com/container-platform/4.6/registry/configuring_registry_storage/configuring-registry-storage-vsphere.html)
+- [ ] [Expose the registry](https://docs.openshift.com/container-platform/4.6/registry/securing-exposing-registry.html)
+
+#### Security and Compliance
+- [ ] [Compliance Operator](https://docs.openshift.com/container-platform/4.6/security/compliance_operator/compliance-operator-understanding.html)
+- [ ] [File Integrity Operator](https://docs.openshift.com/container-platform/4.6/security/file_integrity_operator/file-integrity-operator-understanding.html)
+- [ ] [Replace Default Ingress Certificate](https://docs.openshift.com/container-platform/4.6/security/certificates/replacing-default-ingress-certificate.html)
+- [ ] [Adding API Server Certificates](https://docs.openshift.com/container-platform/4.6/security/certificates/api-server.html)
+- [ ] [Service Certificates](https://docs.openshift.com/container-platform/4.6/security/certificates/service-serving-certificate.html)
+- [ ] [Enable etcd Encryption](https://docs.openshift.com/container-platform/4.6/security/encrypting-etcd.html) ([alternate link](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html/post-installation_configuration/post-install-cluster-tasks#post-install-etcd-tasks))
+- [ ] [Container Security Operator](https://docs.openshift.com/container-platform/4.6/security/pod-vulnerability-scan.html)
+- [ ] [Red Hat CoreOS (RHCOS) Hardening Guide](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html/security_and_compliance/container-security#security-hardening)
+- [ ] [USB Guard](https://docs.openshift.com/container-platform/4.6/post_installation_configuration/machine-configuration-tasks.html#rhcos-add-extensions_post-install-machine-configuration-tasks) ([RHEL docs](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/security_hardening/index#usbguard_protecting-systems-against-intrusive-usb-devices))
+
+#### Logging
+- [ ] [Install logging stack](https://docs.openshift.com/container-platform/4.6/logging/cluster-logging-deploying.html)
+- [ ] [Cluster logging configuration](https://docs.openshift.com/container-platform/4.6/logging/config/cluster-logging-configuring-cr.html)
+- [ ] [Setup log forwarding (external log aggregators)](https://docs.openshift.com/container-platform/4.6/logging/cluster-logging-external.html)
+
+#### Monitoring
+- [ ] [Configure monitoring stack](https://docs.openshift.com/container-platform/4.6/monitoring/configuring-the-monitoring-stack.html#configuring-the-monitoring-stack)
+- [ ] [Enable monitoring for user-defined projects](https://docs.openshift.com/container-platform/4.6/monitoring/enabling-monitoring-for-user-defined-projects.html)
+- [ ] [Setup Alerts](https://docs.openshift.com/container-platform/4.6/monitoring/managing-alerts.html)
+- [ ] [Expose custom metrics for autoscaling](https://docs.openshift.com/container-platform/4.6/monitoring/exposing-custom-application-metrics-for-autoscaling.html)
+
+#### Service Mesh
+
+
+#### Metering
 
