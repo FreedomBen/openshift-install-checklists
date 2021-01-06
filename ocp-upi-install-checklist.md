@@ -139,7 +139,7 @@ If there is a conflict between this checklist and the [official docs](https://do
   - [ ] 6443 (Kubernetes API)
 
 
-### Post-install
+### Post-install Configuration
 
 #### Authentication
 - [ ] [Internal OAuth](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html/authentication_and_authorization/configuring-internal-oauth)
@@ -169,6 +169,7 @@ If there is a conflict between this checklist and the [official docs](https://do
 - [ ] Enable Registry:  ([Bare Metal and vSPhere](https://docs.openshift.com/container-platform/4.6/registry/configuring-registry-operator.html#registry-removed_configuring-registry-operator))
 - [ ] Configure Registry:  [AWS](https://docs.openshift.com/container-platform/4.6/registry/configuring_registry_storage/configuring-registry-storage-aws-user-infrastructure.html) - [GCP](https://docs.openshift.com/container-platform/4.6/registry/configuring_registry_storage/configuring-registry-storage-gcp-user-infrastructure.html) - [Azure](https://docs.openshift.com/container-platform/4.6/registry/configuring_registry_storage/configuring-registry-storage-azure-user-infrastructure.html) - [Bare Metal](https://docs.openshift.com/container-platform/4.6/registry/configuring_registry_storage/configuring-registry-storage-baremetal.html) - [vSphere](https://docs.openshift.com/container-platform/4.6/registry/configuring_registry_storage/configuring-registry-storage-vsphere.html)
 - [ ] [Expose the registry](https://docs.openshift.com/container-platform/4.6/registry/securing-exposing-registry.html)
+- [ ] [Allowlist/blocklist remote registries](https://docs.openshift.com/container-platform/4.6/openshift_images/image-configuration.html)
 
 #### Security and Compliance
 - [ ] [Compliance Operator](https://docs.openshift.com/container-platform/4.6/security/compliance_operator/compliance-operator-understanding.html)
